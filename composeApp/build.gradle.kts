@@ -38,6 +38,17 @@ kotlin {
             implementation (libs.okhttp)
             implementation (libs.logging.interceptor)
 
+
+            implementation("io.ktor:ktor-client-core:3.0.1") // Usa la versión que tengas en tu backend
+
+            // 2. El plugin de WebSockets si quieres recibir los mensajes de Kafka en tiempo real
+            implementation("io.ktor:ktor-client-websockets:3.0.1")
+
+            // 3. Para poder entender los JSONs que mandemos desde el backend
+            implementation("io.ktor:ktor-client-content-negotiation:3.0.1")
+            implementation("io.ktor:ktor-serialization-kotlinx-json:3.0.1")
+            implementation("io.ktor:ktor-client-cio:3.0.1")
+
         }
 
 

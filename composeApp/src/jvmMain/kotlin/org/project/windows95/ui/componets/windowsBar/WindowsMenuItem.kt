@@ -1,4 +1,4 @@
-package org.project.windows95.ui.componets
+package org.project.windows95.ui.componets.windowsBar
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.hoverable

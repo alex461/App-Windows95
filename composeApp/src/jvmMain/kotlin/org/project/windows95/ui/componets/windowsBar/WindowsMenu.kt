@@ -1,4 +1,4 @@
-package org.project.windows95.ui.componets
+package org.project.windows95.ui.componets.windowsBar
 
 
 import androidx.compose.foundation.background
@@ -14,11 +14,11 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.painterResource
 import org.project.windows95.ui.color.windowsBarTextBackground
+import org.project.windows95.ui.componets.BackgroundComponent
 import org.project.windows95.utils.rotateVertically
 import windows95.composeapp.generated.resources.Res
 import windows95.composeapp.generated.resources.ic_documents
@@ -71,14 +71,14 @@ fun WindowsMenu(showSubMenu: (Float?) -> Unit) {
                     ) { showSubMenu(it) }
                     WindowsMenuItem(
                         text = "Help", painter = painterResource(Res.drawable.ic_help)
-                    ) { showSubMenu(it, ) }
+                    ) { showSubMenu(it,) }
                     WindowsMenuItem(
                         text = "Run...", painter = painterResource(Res.drawable.ic_run)
-                    ) { showSubMenu(it, ) }
+                    ) { showSubMenu(it,) }
                     //DIVIDER
                     WindowsMenuItem(
                         text = "Shut Down...", painter = painterResource(Res.drawable.ic_shutdown)
-                    ) { showSubMenu(it, ) }
+                    ) { showSubMenu(it,) }
                 }
             }
         }

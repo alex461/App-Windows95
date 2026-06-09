@@ -1,6 +1,7 @@
 package org.project.windows95.di
 
 
+import KafkaClient
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.viewModelOf
 import org.koin.core.scope.Scope
@@ -15,4 +16,8 @@ val repositoryModule = module {
 
 val viewModelsModule = module {
     viewModelOf(::ViewModelWindows)
+}
+
+val kmpAppModule = module {
+    single { KafkaClient() }
 }
